@@ -1,0 +1,35 @@
+{
+    "name": "chat",
+    "type": "module",
+    "private": true,
+    "scripts": {
+        "start": "gulp --gulpfile=build/default.js",
+        "lint": "tsc",
+        "format": "prettier --check {app,build}"
+    },
+    "browserslist": [
+        "> 0.2% and not dead"
+    ],
+    "devDependencies": {
+        "@babel/preset-env": "^7.28.3",
+        "@rollup/plugin-babel": "^6.0.4",
+        "@rollup/plugin-terser": "^0.4.4",
+        "@types/browser-sync": "^2.29.0",
+        "@types/gulp": "^4.0.17",
+        "@types/gulp-postcss": "^8.0.6",
+        "@types/postcss-import": "^14.0.3",
+        "@types/postcss-url": "^10.0.4",
+        "browser-sync": "^3.0.4",
+        "cssnano": "^7.1.1",
+        "gulp": "^5.0.1",
+        "gulp-postcss": "^10.0.0",
+        "postcss-import": "^16.1.1",
+        "postcss-preset-env": "^10.3.1",
+        "postcss-url": "^10.1.3",
+        "prettier": "^3.3.3",
+        "prettier-plugin-css-order": "^2.1.2",
+        "prettier-plugin-jsdoc": "^1.3.0",
+        "rollup": "^4.50.1",
+        "typescript": "^5.9.2"
+    }
+}

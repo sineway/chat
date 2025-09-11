@@ -1,0 +1,13 @@
+{
+    "include": ["app", "build"],
+    "compilerOptions": {
+        "allowJs": true,
+        "checkJs": true,
+        "target": "ESNext",
+        "module": "NodeNext",
+        "moduleResolution": "NodeNext",
+        "noEmit": true,
+        "skipLibCheck": true,
+        "noImplicitOverride": true
+    }
+}

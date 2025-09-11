@@ -1,0 +1,8 @@
+{
+    "tabWidth": 4,
+    "useTabs": false,
+    "singleQuote": true,
+    "plugins": ["prettier-plugin-css-order", "prettier-plugin-jsdoc"],
+    "cssDeclarationSorterOrder": "alphabetical",
+    "jsdocCommentLineStrategy": "multiline"
+}
