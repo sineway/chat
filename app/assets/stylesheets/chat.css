@@ -70,6 +70,7 @@
         background-color var(--fast),
         color var(--fast);
     white-space: pre-line;
+    word-break: break-word;
 
     &._outgoing {
         background-color: var(--bw-95);
