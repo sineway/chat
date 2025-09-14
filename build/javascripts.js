@@ -17,7 +17,7 @@ export const javascripts = () =>
         })
         .then((bundle) =>
             bundle.write({
-                file: '../public/assets/javascripts/app.js',
+                file: '../docs/assets/javascripts/app.js',
                 format: 'iife',
                 sourcemap: true,
             }),

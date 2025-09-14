@@ -9,7 +9,7 @@ import bs from 'browser-sync';
 
 const server = () => {
     bs.init({
-        server: '../public',
+        server: '../docs',
         online: false,
         ui: false,
         notify: false,

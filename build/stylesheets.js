@@ -20,7 +20,7 @@ export const stylesheets = () =>
             }),
         )
         .pipe(
-            dest('../public/assets/stylesheets', {
+            dest('../docs/assets/stylesheets', {
                 sourcemaps: '.',
             }),
         );
