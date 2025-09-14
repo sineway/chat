@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Версия Sineway</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap"
+        />
+        <link rel="stylesheet" href="assets/stylesheets/app.css" />
+
+        <script async src="assets/javascripts/app.js"></script>
+    </head>
+    <body>
+        <div class="hero">
+            <h1>
+                Версия
+                <a href="https://t.me/sineway" class="link">Sineway</a>
+            </h1>
+
+            <p>
+                модальное окно &middot; ленивая загрузка &middot; отправка
+                сообщений
+            </p>
+
+            <modal-window id="demo" class="overlay" hidden="hidden">
+                <user-chat data-source="chat.json"></user-chat>
+            </modal-window>
+
+            <p>
+                <a href="#demo" class="button _accent">Открыть</a>
+            </p>
+
+            <noscript>
+                <p>Для работы приложения требуется <b>JavaScript</b></p>
+            </noscript>
+        </div>
+    </body>
+</html>
