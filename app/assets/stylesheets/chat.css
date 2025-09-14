@@ -1,0 +1,113 @@
+.chat {
+    border-radius: inherit;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    max-height: 550px;
+    min-height: 250px;
+
+    @media (width >= 600px) {
+        width: 600px;
+    }
+}
+
+.chat__placeholder {
+    align-items: center;
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+}
+
+.chat__header {
+    border-bottom: 1px solid var(--bw-90);
+    display: flex;
+    gap: 8px;
+    margin: 0;
+    padding: 16px;
+}
+
+.chat__header-image {
+    background-color: var(--bw-90);
+    border-radius: 4px;
+    height: 36px;
+    object-fit: cover;
+    width: 36px;
+}
+
+.chat__header-caption {
+    display: flex;
+    flex-flow: column;
+
+    > :nth-of-type(1) {
+        font: 600 var(--sans-30);
+    }
+
+    > :nth-of-type(2) {
+        color: var(--bw-40);
+        font: 600 var(--sans-20);
+    }
+}
+
+.chat__content {
+    display: flex;
+    flex: 1 1 auto;
+    flex-flow: column;
+    gap: 1px;
+    margin: 0 0 auto;
+    overflow: auto;
+    padding: 16px;
+    scrollbar-gutter: stable;
+    scrollbar-width: thin;
+}
+
+.chat__entry {
+    border-radius: 4px;
+    display: flex;
+    font: 500 var(--sans-10);
+    gap: 8px;
+    padding: 8px 12px;
+    transition:
+        background-color var(--fast),
+        color var(--fast);
+    white-space: pre-line;
+
+    &._outgoing {
+        background-color: var(--bw-95);
+    }
+
+    &._recent {
+        background-color: var(--blue-95);
+    }
+}
+
+.chat__entry-image {
+    border-radius: 4px;
+    height: 24px;
+    width: 24px;
+}
+
+.chat__footer {
+    background-color: var(--blue-95);
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    display: flex;
+    gap: 8px;
+    padding: 16px;
+}
+
+.chat__footer-image {
+    background-color: var(--bw-90);
+    border-radius: 4px;
+    height: 36px;
+    object-fit: cover;
+    user-select: none;
+    width: 36px;
+}
+
+.chat__footer-controls {
+    align-items: start;
+    display: flex;
+    flex: 1 1 auto;
+    flex-flow: column;
+    gap: 8px 0;
+}
