@@ -1,0 +1,17 @@
+.textbox {
+    background-color: var(--bw-100);
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    overflow: auto;
+    padding: 8px;
+    resize: none;
+    scrollbar-gutter: stable;
+    scrollbar-width: thin;
+    width: 100%;
+
+    &:not(:focus-visible) {
+        outline: 1px solid var(--bw-80);
+        outline-offset: -1px;
+    }
+}

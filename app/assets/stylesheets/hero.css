@@ -1,0 +1,9 @@
+.hero {
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+    font: 500 var(--sans-20);
+    height: 100vh;
+    justify-content: center;
+    margin: 0;
+}

@@ -1,0 +1,26 @@
+html {
+    scrollbar-gutter: stable;
+}
+
+body {
+    background-color: var(--bw-100);
+    color: var(--bw-20);
+    font: 500 var(--sans-20);
+    margin: 0;
+}
+
+a {
+    color: inherit;
+}
+
+textarea,
+button {
+    border: none;
+    color: inherit;
+    font: inherit;
+}
+
+:focus-visible {
+    outline: 2px solid var(--bw-10);
+    outline-offset: -2px;
+}

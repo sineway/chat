@@ -1,0 +1,70 @@
+/*
+    Шрифты
+*/
+
+:root {
+    --sans: 'Inter', -apple-system, sans-serif;
+    --sans-10: 10px / 12px var(--sans);
+    --sans-20: 12px / 12px var(--sans);
+    --sans-30: 16px / 20px var(--sans);
+}
+
+/*
+    Цвета
+*/
+
+:root {
+    --red-50: hsl(0deg 63% 50%);
+    --blue-50: hsl(208deg 63% 50%);
+    --blue-95: hsl(208deg 63% 95%);
+
+    --bw-10: hsl(0 0 0%);
+    --bw-20: hsl(0 0 20%);
+    --bw-30: hsl(0 0 30%);
+    --bw-40: hsl(0 0 40%);
+    --bw-50: hsl(0 0 50%);
+    --bw-60: hsl(0 0 60%);
+    --bw-70: hsl(0 0 70%);
+    --bw-80: hsl(0 0 80%);
+    --bw-90: hsl(0 0 90%);
+    --bw-95: hsl(0 0 95%);
+    --bw-100: hsl(0 0 100%);
+}
+
+/*
+    Эффекты
+*/
+
+:root {
+    --fast: 200ms;
+    --slow: 600ms;
+
+    @media (prefers-reduced-motion: reduce) {
+        --fast: 0;
+        --slow: 0;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+}
+
+@keyframes fade-out {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes zoom-in {
+    from {
+        transform: scale(80%);
+    }
+}
+
+@keyframes zoom-out {
+    to {
+        transform: scale(80%);
+    }
+}

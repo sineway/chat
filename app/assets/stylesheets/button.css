@@ -1,0 +1,26 @@
+.button {
+    background-color: var(--bw-90);
+    border-radius: 4px;
+    color: var(--bw-40);
+    cursor: default;
+    display: inline-flex;
+    gap: 4px;
+    padding: 8px 20px;
+    text-decoration: none;
+    transition: filter var(--fast);
+    user-select: none;
+    white-space: nowrap;
+
+    &._accent {
+        background-color: var(--blue-50);
+        color: var(--bw-100);
+    }
+
+    &:hover {
+        filter: brightness(95%);
+    }
+
+    &:active {
+        filter: brightness(90%);
+    }
+}
