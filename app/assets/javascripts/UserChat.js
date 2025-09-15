@@ -43,7 +43,7 @@ class UserChat extends LazyElement {
             return;
         }
         this.innerHTML = this.render(await this.loadData());
-        this.scroller = this.querySelector('.chat__content-scroller');
+        this.scroller = this.querySelector('.chat__scroller');
         this.scroller.scrollTop = this.scroller.scrollHeight;
         this.content = this.querySelector('.chat__content');
         this.textbox = this.querySelector('.textbox');
@@ -110,17 +110,15 @@ class UserChat extends LazyElement {
                 </figcaption>
             </figure>
 
-            <div class="chat__content-scroller">
+            <div class="chat__scroller">
                 <ol class="chat__content">
                     ${chat.entries.map((entry) => {
-                        const outgoing = entry.userId === this.sender.id;
+                        const out = entry.userId === this.sender.id;
 
                         return this.renderEntry({
-                            image: outgoing
-                                ? this.sender.image
-                                : recipient.image,
+                            image: out ? this.sender.image : recipient.image,
                             content: entry.content,
-                            modifiers: outgoing ? ['_outgoing'] : [],
+                            modifiers: out ? ['_outgoing'] : [],
                         });
                     })}
                 </ol>

@@ -1,5 +1,6 @@
 .button {
     background-color: var(--bw-90);
+    border: none;
     border-radius: 4px;
     color: var(--bw-40);
     cursor: default;
