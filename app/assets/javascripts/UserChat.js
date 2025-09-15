@@ -104,17 +104,19 @@ class UserChat extends LazyElement {
                 </figcaption>
             </figure>
 
-            <ol class="chat__content">
-                ${chat.entries.map((entry) => {
-                    const outgoing = entry.userId === this.sender.id;
+            <div class="chat__content-scroller">
+                <ol class="chat__content">
+                    ${chat.entries.map((entry) => {
+                        const outgoing = entry.userId === this.sender.id;
 
-                    return this.renderEntry({
-                        image: outgoing ? this.sender.image : recipient.image,
-                        content: entry.content,
-                        modifiers: outgoing ? ['_outgoing'] : [],
-                    });
-                })}
-            </ol>
+                        return this.renderEntry({
+                            image: outgoing ? this.sender.image : recipient.image,
+                            content: entry.content,
+                            modifiers: outgoing ? ['_outgoing'] : [],
+                        });
+                    })}
+                </ol>
+            </div>
 
             <form class="chat__footer">
                 <img
