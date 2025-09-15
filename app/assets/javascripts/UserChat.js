@@ -5,6 +5,11 @@ class UserChat extends LazyElement {
     /**
      * @type {HTMLElement}
      */
+    scroller = null;
+
+    /**
+     * @type {HTMLElement}
+     */
     content = null;
 
     /**
@@ -33,13 +38,14 @@ class UserChat extends LazyElement {
      * @override
      */
     async intersectedCallback() {
-        if (this.content) {
-            this.content.scrollTop = this.content.scrollHeight;
+        if (this.scroller) {
+            this.scroller.scrollTop = this.content.scrollHeight;
             return;
         }
         this.innerHTML = this.render(await this.loadData());
+        this.scroller = this.querySelector('.chat__content-scroller');
+        this.scroller.scrollTop = this.scroller.scrollHeight;
         this.content = this.querySelector('.chat__content');
-        this.content.scrollTop = this.content.scrollHeight;
         this.textbox = this.querySelector('.textbox');
 
         this.addEventListener('input', this.handleInput);
@@ -110,7 +116,9 @@ class UserChat extends LazyElement {
                         const outgoing = entry.userId === this.sender.id;
 
                         return this.renderEntry({
-                            image: outgoing ? this.sender.image : recipient.image,
+                            image: outgoing
+                                ? this.sender.image
+                                : recipient.image,
                             content: entry.content,
                             modifiers: outgoing ? ['_outgoing'] : [],
                         });
@@ -163,7 +171,7 @@ class UserChat extends LazyElement {
      */
     addEntry(options) {
         this.content.insertAdjacentHTML('beforeend', this.renderEntry(options));
-        this.content.scrollTop = this.content.scrollHeight;
+        this.scroller.scrollTop = this.scroller.scrollHeight;
 
         const entry = this.content.lastElementChild;
         setTimeout(() => {
